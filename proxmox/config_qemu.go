@@ -68,7 +68,7 @@ storage:xxx
 */
 func (config ConfigQemu) CloneVm(sourceVmr *VmRef, vmr *VmRef, client *Client) (err error) {
 	vmr.SetVmType("qemu")
-	fullclone := "1"
+	fullclone := "0"
 	if config.FullClone != nil {
 		fullclone = strconv.Itoa(*config.FullClone)
 	}
